@@ -14,8 +14,8 @@ function App() {
       <HeroSection />
       <Categories />
       <Campaigns />
-      <Favorites />
       <MobileApp />
+      <Favorites />
       <Cards />
       <Footer />
     </>
