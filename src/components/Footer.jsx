@@ -68,7 +68,7 @@ export default function Footer() {
     }
   ]
   return (
-    <div className='bg-white mt-10'>
+    <div className='bg-white mt-10 container'>
       <div className='container px-4 md:px-0'>
         <div className='grid gap-y-6 md:grid-cols-2 lg:grid-cols-4 py-5 md:pt-10'>
           <section>
