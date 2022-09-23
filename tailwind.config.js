@@ -2,6 +2,16 @@
 module.exports = {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: '0rem',
+        sm: '4rem',
+        lg: '5rem',
+        xl: '6rem',
+        '2xl': '10rem',
+      },
+    },
     extend: {
       spacing: {
         '0.1': '0.063rem'

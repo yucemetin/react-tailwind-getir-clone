@@ -36,27 +36,57 @@ export default function Campaigns() {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 2,
+    slidesToShow: 4,
+    slidesToScroll: 1,
     initialSlide: 1,
     autoplay: true,
+    arrows: true,
     nextArrow: <NextButton />,
-    prevArrow: <PrevButton />
+    prevArrow: <PrevButton />,
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true
+        }
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: false
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: false
+        }
+      }
+    ]
 
   };
   return (
-    <div className='py-8'>
-      <h3 className='text-sm font-semibold mb-3 mx-40'>Kampanyalar</h3>
-      <div className='mb-3 mx-40'>
-        {!banners.length && "Yükleniyor"}
-        <Slider {...settings}>
-          {banners && banners.map(campaing => (
-            <div key={campaing.id} className="px-2 ">
-              <img className='rounded-lg ' src={campaing.image} />
-            </div>
-          ))}
-
-        </Slider>
+    <div className='md:py-8'>
+      <div className='md:container w-full'>
+        <h3 className='hidden md:block text-sm font-semibold mb-3'>Kampanyalar</h3>
+        <div className='md:mb-3'>
+          {!banners.length && "Yükleniyor"}
+          <Slider {...settings}>
+            {banners && banners.map(campaing => (
+              <div key={campaing.id} className="md:px-2 ">
+                <img className='md:rounded-lg ' src={campaing.image} />
+              </div>
+            ))}
+          </Slider>
+        </div>
       </div>
     </div>
   )

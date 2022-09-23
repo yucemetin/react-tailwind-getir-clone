@@ -11,9 +11,9 @@ export default function Favorites() {
 
   }, [])
   return (
-    <div className='mb-3 mx-40'>
+    <div className='mb-3 container'>
       <h3 className='text-sm font-semibold mb-5'>Favoriler</h3>
-      <div className='grid grid-cols-8 gap-0.1 rounded-lg overflow-hidden'>
+      <div className='grid grid-cols-3 2xl:grid-cols-9 xl:grid-cols-8 lg:grid-cols-6 md:grid-cols-4 gap-0.1 rounded-lg overflow-hidden'>
         {!products.length && "Yükleniyor"}
         {products.map(product => (
           <ProductItem key={product.id} product={product} />
